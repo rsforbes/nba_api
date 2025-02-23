@@ -17,5 +17,10 @@
         "tests"
     ],
     "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true
+    "python.testing.pytestEnabled": true,
+    "circleci.filters.branchFilter": "allBranches",
+    "circleci.persistedProjectSelection": [
+        "gh/rsforbes/nba_api"
+    ],
+    "circleci.filters.myPipelinesOnly": true
 }

@@ -15,8 +15,21 @@ jobs:
     docker: 
       - image: <<parameters.image>>
     
+    # Add resource_class to increase available memory
+    resource_class: large
+
     steps: 
       - checkout
+      # Add environment variables to help with memory management
+      - run:
+          command: |
+            echo "export MAKEFLAGS=-j2" >> $BASH_ENV
+            echo "export NPY_NUM_BUILD_JOBS=2" >> $BASH_ENV
+            source $BASH_ENV
+      # Install numpy separately first
+      - run:
+          command: pip install numpy==1.26.4
+          no_output_timeout: 30m
       - run: poetry install --no-ansi
       - unless:
           condition: << parameters.circle_pr_number >>
