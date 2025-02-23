@@ -2,17 +2,17 @@
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
-[tool.poetry]
+[project]
 name = "nba_api"
 version = "1.7"
 description = "An API Client package to access the APIs for NBA.com"
 license = "MIT"
 authors = [ 
-     "Swar Patel <swar.m.patel@gmail.com>",
+     {email="Swar Patel <swar.m.patel@gmail.com>"}
 ]
 maintainers = [
-    "Swar Patel <swar.m.patel@gmail.com>",
-    "Randy Forbes <randy.forbes@gmail.com>",
+    {email="Swar Patel <swar.m.patel@gmail.com>"},
+    {email="Randy Forbes <randy.forbes@gmail.com>"}
 ]
 readme = "README.md"
 repository = "https://github.com/swar/nba_api"
@@ -25,14 +25,12 @@ classifiers = [
     "Operating System :: OS Independent",
     "Topic :: Software Development"
 ]
-
-[tool.poetry.dependencies]
-python = "^3.9"
-requests = "^2.32.3"
-numpy = "^1.22.2"
-
-[tool.poetry.urls]
+requires-python = ">=3.9"
 "Bug Tracker" = "https://github.com/swar/nba_api/issues"
+dependencies = [
+    "requests (>=2.32.3)",
+    "numpy (>1.22.2)"]
+
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.3"
