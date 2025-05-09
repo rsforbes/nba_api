@@ -9,9 +9,9 @@ from .discovery import discover_endpoints, discover_endpoints_from_files
 from .parameter_store import ParameterStore
 
 __all__ = [
-    'EndpointAnalyzer',
-    'analyze_endpoint',
-    'discover_endpoints',
-    'discover_endpoints_from_files',
-    'ParameterStore',
+    "EndpointAnalyzer",
+    "analyze_endpoint",
+    "discover_endpoints",
+    "discover_endpoints_from_files",
+    "ParameterStore",
 ]
