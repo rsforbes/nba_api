@@ -16,6 +16,18 @@ Have you identified a reproducible problem? Have a feature request? Identified a
 
 Before you create a new issue, please do a search in [open issues](https://github.com/swar/nba_api/issues) to see if the issue or feature request has already been filed.
 
+For issues related to NBA API endpoints, consider using the endpoint analyzer to diagnose the problem:
+
+```bash
+# Install the package
+pip install nba_api
+
+# Test a specific endpoint
+nba-analyze --endpoint ProblemEndpoint
+```
+
+This will help identify required parameters and potential issues with the endpoint.
+
 If you find your issue already exists, make relevant comments and add your [reaction](https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments). Use a reaction in place of a "+1" comment:
 
 * 👍 - upvote

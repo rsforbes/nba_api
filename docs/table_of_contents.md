@@ -8,6 +8,8 @@
 
 - [Scripts](scripts.md)
 
+- [Endpoint Analyzer](analyzer.md)
+
 - NBA API
     - Library
         - Debug 

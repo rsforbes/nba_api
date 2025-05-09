@@ -1,0 +1,12 @@
+#!/usr/bin/env python
+"""
+NBA API Endpoint Analyzer CLI Script
+
+This script provides a command-line interface for analyzing NBA API endpoints.
+"""
+
+import sys
+from nba_api.tools.analyzer.cli import main
+
+if __name__ == "__main__":
+    sys.exit(main())

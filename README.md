@@ -36,6 +36,37 @@ career.get_json()
 career.get_dict()
 ```
 
+## NBA API Endpoint Analyzer
+
+The package includes an endpoint analyzer for testing, validating, and exploring NBA.com API endpoints.
+
+### From Python
+
+```python
+from nba_api.tools.analyzer import analyze_endpoint, discover_endpoints
+
+# Analyze a specific endpoint
+result = analyze_endpoint("CommonPlayerInfo")
+print(result["required_parameters"])  # ['PlayerID']
+
+# Get all available endpoints
+endpoints = discover_endpoints()
+print(f"Found {len(endpoints)} endpoints")
+```
+
+### From Command Line
+
+```bash
+# List all available endpoints
+nba-analyze --list
+
+# Analyze a specific endpoint
+nba-analyze --endpoint CommonPlayerInfo
+
+# Analyze all endpoints and save results to a file
+nba-analyze --all --output analysis.json
+```
+
 ## NBA Live Data
 
 ```python
