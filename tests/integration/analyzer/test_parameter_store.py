@@ -41,8 +41,9 @@ class TestParameterStore:
         # Clean up
         try:
             os.unlink(file_path)
-        except:
-            pass
+        except (OSError, IOError) as e:
+            # Log the error but continue with the test
+            print(f"Failed to clean up temporary file: {e}")
     
     def test_load_from_file(self, temp_param_file):
         """Test loading parameters from a file."""
@@ -111,8 +112,9 @@ class TestParameterStore:
             # Clean up
             try:
                 os.unlink(file_path)
-            except:
-                pass
+            except (OSError, IOError) as e:
+                # Log the error but continue with the test
+                print(f"Failed to clean up temporary file: {e}")
     
     def test_update_from_analysis(self):
         """Test updating parameters from analysis results."""
@@ -152,5 +154,6 @@ class TestParameterStore:
             # Clean up
             try:
                 os.unlink(file_path)
-            except:
-                pass
+            except (OSError, IOError) as e:
+                # Log the error but continue with the test
+                print(f"Failed to clean up temporary file: {e}")
